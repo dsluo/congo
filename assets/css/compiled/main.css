@@ -1964,6 +1964,10 @@ body a, body button {
   margin-bottom: 0.5rem;
 }
 
+.\!mt-1 {
+  margin-top: 0.25rem !important;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }

@@ -41,7 +41,7 @@ Note that the variable names provided in this table use dot notation to simplify
 |`summaryLength`|integer|`0`|The number of words that are used to generate the article summary when one is not provided in the [front matter]({{< ref "front-matter" >}}). A value of `0` will use the first sentence. This value has no effect when summaries are hidden.|
 |`author.name`|string|_Not set_|The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.|
 |`author.image`|string|_Not set_|Path to the image file of the author. The image should be a 1:1 aspect ratio and placed in the site's `static/` folder.|
-|`author.bio`|string|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers.|
+|`author.bio`|string|_Not set_|A Markdown string containing the author's bio. It will be displayed in article footers and as a subtitle in the profile layout, if enabled.|
 |`author.links`|array of objects|_Not set_|The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`.|
 |`permalinks`||_Not set_|Refer to the [Hugo docs](https://gohugo.io/content-management/urls/#permalinks) for permalink configuration.|
 |`taxonomies`||_Not set_|Refer to the [Organising content]({{< ref "getting-started#organising-content" >}}) section for taxonomy configuration.|
@@ -65,6 +65,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 |`robots`|string|_Not set_|String that indicates how robots should handle your site. If set, it will be output in the page head. Refer to [Google's docs](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag#directives) for valid values.|
 |`homepage.layout`|string|`"page"`|The layout of the homepage. Valid values are `page`, `profile` or `custom`. When set to `custom`, you must provide your own layout by creating a `/layouts/partials/home/custom.html` file. Refer to the [Homepage Layout]({{< ref "homepage-layout" >}}) section for more details.|
 |`homepage.showRecent`|boolean|`false`|Whether or not to display the recent articles list on the homepage.|
+|`homepage.showBio`|boolean|`false`|Whether or not to display the author's bio as a subtitle in the profile layout.|
 |`article.showDate`|boolean|`true`|Whether or not article dates are displayed.|
 |`article.showDateUpdated`|boolean|`false`|Whether or not the dates articles were updated are displayed.|
 |`article.dateFormat`|string|`"2 January 2006"`|How article dates are formatted. Refer to the [Hugo docs](https://gohugo.io/functions/format/#gos-layout-string) for acceptable formats.|

@@ -10,6 +10,13 @@
     <h1 class="text-4xl font-extrabold">
       {{ .Site.Author.name | default .Site.Title }}
     </h1>
+    {{ if .Site.Params.homepage.showBio | default false }}
+      {{ with .Site.Author.bio | markdownify | emojify }}
+        <h2 class="!mt-1 text-xl text-neutral-500 dark:text-neutral-400">
+          {{ . }}
+        </h2>
+      {{ end }}
+    {{ end }}
     <div class="mt-1 text-2xl">
       {{ partialCached "author-links.html" . }}
     </div>
